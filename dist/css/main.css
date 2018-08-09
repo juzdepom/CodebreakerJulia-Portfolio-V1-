@@ -106,10 +106,13 @@ h3 {
     font-size: 1.1rem;
     background: rgba(5, 5, 5, 0.5);
     color: #C7E23E; }
+    h1.sm-heading #blog-topics,
+    h2.sm-heading #blog-topics,
+    h3.sm-heading #blog-topics {
+      padding-left: 30px; }
     h1.sm-heading div,
     h2.sm-heading div,
     h3.sm-heading div {
-      padding-left: 30px;
       color: white; }
 
 a {
