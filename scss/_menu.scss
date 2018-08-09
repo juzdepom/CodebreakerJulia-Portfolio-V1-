@@ -34,3 +34,75 @@
         }
     }
 }
+
+//Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // opacity: 1;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+    &-branding,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        opacity: 0.9;
+        overflow: hidden;
+    }
+    //right side of the menu
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            //slide in from top
+            transform: translate3d(0,0,0);
+        }
+    }
+    //left side of the menu
+    &-branding {
+        background: lighten($primary-color, 8);
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+        //Slide in from bottom
+        transform: translate3d(0, 0, 0);
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            opacity: 1;
+            border-radius: 50%;
+            border: solid 5px $secondary-color;
+            box-sizing: border-box;
+            z-index: 5;
+        }
+    }
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+
+}
