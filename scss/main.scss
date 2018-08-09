@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
 @import 'home-terminal';
+@import 'mobile';
 
 * {
   box-sizing: border-box
@@ -21,7 +22,7 @@ h3 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
-    font-size: 6rem;
+    // font-size: 6rem;
   }
   &.sm-heading {
     margin-bottom: 2rem;
