@@ -1,0 +1,56 @@
+$terminal-red: red;
+$terminal-yellow: yellow;
+$terminal-green: green;
+
+#home-terminal{
+    background-color: black;
+}
+
+#home-terminal-header {
+    width: 100%;
+    background-color: darkgray;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    position: relative;
+}
+
+.terminal-button {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top:25%;
+}
+
+.red {
+    background-color: red;
+    margin-left: 10px;
+}
+
+.yellow {
+    background-color: yellow;
+    margin-left: 25px;
+}
+
+.green {
+    background-color: green;
+    margin-left: 40px;
+}
+
+#home-terminal-text {
+    padding-left: 20px;
+}
+
+#secret-password {
+    margin-bottom: 20px;
+}
+
+#blog-topics {
+    padding-left: 30px;
+  }
+  div {
+    color: white;
+  }
