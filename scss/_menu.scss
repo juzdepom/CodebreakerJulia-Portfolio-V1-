@@ -40,7 +40,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    // opacity: 1;
     visibility: hidden;
 
     &.show {
@@ -55,11 +54,11 @@
         float: left;
         width: 50%;
         height: 100vh;
-        opacity: 0.9;
         overflow: hidden;
     }
     //right side of the menu
     &-nav {
+        opacity: 0.9;
         margin: 0;
         padding: 0;
         background: darken($primary-color, 5);
@@ -74,7 +73,7 @@
     }
     //left side of the menu
     &-branding {
-        background: lighten($primary-color, 8);
+        background: rgba(lighten($primary-color, 8), 0.9);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
@@ -83,11 +82,11 @@
         transform: translate3d(0, 0, 0);
         }
         img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             opacity: 1;
             border-radius: 50%;
-            border: solid 5px $secondary-color;
+            border: solid 3px $secondary-color;
             box-sizing: border-box;
             z-index: 5;
         }
@@ -104,5 +103,7 @@
 
 // Delay each nav item slide by 0.1s
 @for $x from 1 through 4 {
-
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
 }

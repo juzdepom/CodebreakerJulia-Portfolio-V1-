@@ -2,8 +2,10 @@ $terminal-red: red;
 $terminal-yellow: yellow;
 $terminal-green: green;
 
+
 #home-terminal{
     background-color: black;
+    width: 50%; //only issue is when this is in iphone mode
 }
 
 #home-terminal-header {
