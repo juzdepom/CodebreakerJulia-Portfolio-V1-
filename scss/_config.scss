@@ -1,10 +1,13 @@
-$primary-color:black;
+// $primary-color: white;
+$primary-color: #222222;
 // $secondary-color: #eece1a;
 // $secondary-color: #0DBC79;
-$secondary-color: #C7E23E;
+// $secondary-color: #C7E23E; (light green-yellow)
+// $secondary-color: #CF156A;
+$secondary-color: #3E99ED;
 $show-home-image: true;
 $home-image: url(../img/programmer.jpg);
-$background-opacity: 0.8;
+$background-opacity: 0.9;
 //this is basically like a function
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -32,11 +35,19 @@ $background-opacity: 0.8;
   }
 }
 
+@function set-text-color($color){
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
 //Media Query Mixins
 
 @mixin mediaSm {
   //500px or less
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 510px) {
     @content;
   }
 }
@@ -50,7 +61,6 @@ $background-opacity: 0.8;
     @content;
   }
 }
-
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;

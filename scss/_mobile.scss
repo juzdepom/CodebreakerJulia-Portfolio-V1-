@@ -61,6 +61,25 @@
             height: 170px;
         }
     }
+    //Entrepreneur | Programmer | Fighter | Dancer | Model
+    #subtitle-labels {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    //About Page
+    .about-info {
+        grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+        .bio{
+            font-size: 20px;
+        }
+    }
 
 }
 // Smartphones
@@ -77,5 +96,9 @@
     }
     .nav-link {
         font-size: 20px !important;
+    }
+    .contact-me-btn {
+        margin-top: 20px;
+        display: block;
     }
 }
