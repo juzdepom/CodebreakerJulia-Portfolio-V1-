@@ -155,7 +155,8 @@ body {
   body#bg-img {
     background: url(../img/programmer.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    z-index: -3; }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -163,8 +164,14 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(34, 34, 34, 0.9);
-      z-index: -1; }
+      background: rgba(34, 34, 34, 0.8);
+      z-index: -2; }
+  body #bg-img-code {
+    display: none;
+    opacity: 0.1;
+    z-index: -1;
+    position: absolute;
+    height: 100%; }
   body #subtitle-labels {
     color: white; }
 
@@ -240,7 +247,39 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
 
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #3E99ED;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #3E99ED;
+    color: black; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #a2a2a2;
+  color: #333; }
+
 #main-footer {
+  position: absolute;
+  margin-top: -60px;
+  width: 100%;
   text-align: center;
   padding: 1rem;
   background: #090909;
@@ -251,12 +290,16 @@ main {
   .lg-heading {
     font-size: 6rem; }
   #home-terminal {
-    width: 40%; } }
+    width: 40%; }
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .lg-heading {
     font-size: 6rem;
-    line-height: 1.1; } }
+    line-height: 1.1; }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -293,7 +336,9 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
     .about-info .bio {
-      font-size: 20px; } }
+      font-size: 20px; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 510px) {
   main#home h1 {
@@ -306,4 +351,6 @@ main {
     font-size: 20px !important; }
   .contact-me-btn {
     margin-top: 20px;
-    display: block; } }
+    display: block; }
+  .projects {
+    grid-template-columns: repeat(1, 1fr); } }

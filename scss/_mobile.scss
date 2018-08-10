@@ -7,6 +7,10 @@
     #home-terminal {
         width: 40%;
     }
+    //Project page
+    .projects {
+        grid-template-columns: repeat(4, 1fr)
+    }
 
 }
 // Desktops & Laptops
@@ -15,6 +19,10 @@
     .lg-heading {
         font-size: 6rem;
         line-height: 1.1;
+    }
+    //Project Page
+    .projects {
+        grid-template-columns: repeat(3, 1fr)
     }
 }
 // Tablets & Small Laptops
@@ -80,11 +88,16 @@
             font-size: 20px;
         }
     }
+    //Projects Page
+    .projects {
+        grid-template-columns: repeat(2, 1fr)
+    }
 
 }
 // Smartphones
 
 @include mediaSm {
+
     main#home h1 {
         margin-top: 10vh;
     }
@@ -100,5 +113,9 @@
     .contact-me-btn {
         margin-top: 20px;
         display: block;
+    }
+    //Projects Page
+    .projects {
+        grid-template-columns: repeat(1, 1fr)
     }
 }
